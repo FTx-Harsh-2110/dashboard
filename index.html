@@ -1,0 +1,377 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #1173d4;
+        --primary-color-lightest: #cfe5fb;
+        --primary-color-lighter: #9ecaf7;
+        --primary-color-light: #6db0f3;
+        --primary-color-dark: #1066be;
+        --primary-color-darker: #0e59a8;
+      }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+<div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<main class="flex-1 px-4 sm:px-6 lg:px-8 py-8">
+<div class="max-w-8xl mx-auto">
+<div class="mb-8">
+<h1 class="text-gray-900 text-3xl font-bold">Master Database Sales Trend Dashboard</h1>
+<p class="text-gray-500 mt-1">Analyze sales trends and performance for the Tobacco industry.</p>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<div class="relative group">
+<div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
+<span class="text-gray-500">Industry:</span>
+<span class="text-gray-900">Tobacco</span>
+<span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
+</div>
+<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Tobacco</a>
+<a class="flex items-center justify-between px-3 py-1.5 text-gray-400 cursor-not-allowed" href="#">
+<span>Liquor</span>
+<span class="material-symbols-outlined text-sm">lock</span>
+</a>
+<a class="flex items-center justify-between px-3 py-1.5 text-gray-400 cursor-not-allowed" href="#">
+<span>Medical</span>
+<span class="material-symbols-outlined text-sm">lock</span>
+</a>
+</div>
+</div>
+<div class="relative group">
+<div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
+<span class="text-gray-500">Date Filter:</span>
+<span class="text-gray-900">Current Year</span>
+<span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
+</div>
+<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Current Year</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Current Quarter</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Current Month</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Current Week</a>
+</div>
+</div>
+<div class="relative group">
+<div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
+<span class="text-gray-500">Region:</span>
+<span class="text-gray-900">USA</span>
+<span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
+</div>
+<div class="absolute top-full left-0 mt-1 w-max bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">All</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">USA</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Canada</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Mexico</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Europe</a>
+</div>
+</div>
+<div class="relative group">
+<div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
+<span class="text-gray-500">Sales Channel:</span>
+<span class="text-gray-900">All</span>
+<span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
+</div>
+<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">All</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Ecommerce</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">On Store</a>
+</div>
+</div>
+<div class="relative group">
+<div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
+<span class="text-gray-500">Brand:</span>
+<span class="text-gray-900">Marlboro</span>
+<span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
+</div>
+<div class="absolute top-full left-0 mt-1 w-max bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">All</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Marlboro</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Newport</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Camel</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Juul</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Black &amp; Mild</a>
+</div>
+</div>
+<div class="relative group">
+<div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
+<span class="text-gray-500">Category:</span>
+<span class="text-gray-900">Cigarettes</span>
+<span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
+</div>
+<div class="absolute top-full left-0 mt-1 w-max bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">All</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Cigarettes</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Smokeless</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Cigars</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Vapes</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Other</a>
+</div>
+</div>
+<div class="relative group">
+<div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
+<span class="text-gray-500">Product:</span>
+<span class="text-gray-900">Marlboro Red</span>
+<span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
+</div>
+<div class="absolute top-full left-0 mt-1 w-max bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">All</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Marlboro Red</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Newport Menthol</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Camel Blue</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Juul Pods</a>
+<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Black &amp; Mild</a>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h2 class="text-gray-900 text-xl font-bold mb-4">Key Performance Indicators</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-col gap-2 rounded-md p-6 bg-white border border-gray-200 shadow-sm">
+<p class="text-gray-500 text-sm font-medium">Total Sales</p>
+<p class="text-gray-900 text-3xl font-bold">$2.5M</p>
+</div>
+<div class="flex flex-col gap-2 rounded-md p-6 bg-white border border-gray-200 shadow-sm">
+<p class="text-gray-500 text-sm font-medium">Sales Growth %</p>
+<p class="text-gray-900 text-3xl font-bold">+15%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-md p-6 bg-white border border-gray-200 shadow-sm">
+<p class="text-gray-500 text-sm font-medium">Number of Orders</p>
+<p class="text-gray-900 text-3xl font-bold">12,500</p>
+</div>
+<div class="flex flex-col gap-2 rounded-md p-6 bg-white border border-gray-200 shadow-sm">
+<p class="text-gray-500 text-sm font-medium">Average Sale per Customer</p>
+<p class="text-gray-900 text-3xl font-bold">$200</p>
+</div>
+</div>
+</div>
+<div class="grid gap-6 mb-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="flex flex-col gap-4 rounded-md border border-gray-200 p-6 bg-white shadow-sm" style="background-color: rgb(233, 231, 231);" style="background-color: rgb(233, 231, 231);">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-gray-500 text-sm font-medium">Sales Over Time</p>
+<p class="text-gray-900 text-3xl font-bold truncate">$2.5M</p>
+<div class="flex items-center gap-2 text-sm">
+<p class="text-gray-500">Current Year</p>
+<p class="text-gray-500 font-medium">+15% vs Previous Year</p>
+</div>
+</div>
+<div class="flex gap-x-4 text-sm">
+<div class="flex items-center gap-x-2">
+<div class="w-3 h-3 rounded-full bg-[var(--primary-color)]"></div>
+<span class="text-gray-600">Current Period</span>
+</div>
+<div class="flex items-center gap-x-2">
+<div class="w-3 h-3 rounded-full bg-gray-300"></div>
+<span class="text-gray-600">Previous Period</span>
+</div>
+</div>
+</div>
+<div class="flex-1 relative group">
+<svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#e2e8f0" stroke-dasharray="4 4" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="var(--primary-color)" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0 132C18.1538 132 18.1538 52 36.3077 52C54.4615 52 54.4615 88 72.6154 88C90.7692 88 90.7692 124 108.923 124C127.077 124 127.077 64 145.231 64C163.385 64 163.385 116 181.538 116C199.692 116 199.692 80 217.846 80C236 80 236 76 254.154 76C272.308 76 272.308 140 290.462 140C308.615 140 308.615 136 326.769 136C344.923 136 344.923 20 363.077 20C381.231 20 381.231 92 399.385 92C417.538 92 417.538 136 435.692 136C453.846 136 453.846 48 472 48" stroke="#cbd5e1" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#paint0_linear_sales_over_time)"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_sales_over_time" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="var(--primary-color)" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="var(--primary-color)" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="absolute top-0 left-0 w-full h-full bg-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="absolute bg-white border border-gray-200 shadow-lg rounded-lg p-2 text-xs w-40" style="left: 36.3077px; top: 1px; transform: translate(-50%, -100%);">
+<p class="font-bold">Feb 2023</p>
+<p><span class="font-semibold">Sales:</span> $210K</p>
+<p class="text-gray-500">+12% vs. Feb 2022</p>
+</div>
+<div class="absolute bg-white border border-gray-200 shadow-lg rounded-lg p-2 text-xs w-40" style="left: 145.231px; top: 23px; transform: translate(-50%, -100%);">
+<p class="font-bold">Apr 2023</p>
+<p><span class="font-semibold">Sales:</span> $330K</p>
+<p class="text-gray-500">+18% vs. Apr 2022</p>
+</div>
+<div class="absolute bg-white border border-gray-200 shadow-lg rounded-lg p-2 text-xs w-40" style="left: 254.154px; top: 35px; transform: translate(-50%, -100%);">
+<p class="font-bold">Jun 2023</p>
+<p><span class="font-semibold">Sales:</span> $450K</p>
+<p class="text-gray-500">+20% vs. Jun 2022</p>
+</div>
+<div class="absolute bg-white border border-gray-200 shadow-lg rounded-lg p-2 text-xs w-40" style="left: 363.077px; top: -9px; transform: translate(-50%, -100%);">
+<p class="font-bold">Aug 2023</p>
+<p><span class="font-semibold">Sales:</span> $100K</p>
+<p class="text-red-500">-5% vs. Aug 2022</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-md border border-gray-200 p-6 bg-white shadow-sm">
+<div>
+<p class="text-gray-500 text-sm font-medium">Top 10 Products by Sales</p>
+<p class="text-gray-900 text-3xl font-bold truncate">$500K</p>
+<div class="flex items-center gap-2 text-sm">
+<p class="text-gray-500">Current Year</p>
+<p class="text-gray-500 font-medium">+5%</p>
+</div>
+</div>
+<div class="flex-1 grid gap-y-3">
+<div class="grid grid-cols-[auto_1fr] items-center gap-x-3 relative group">
+<p class="text-gray-500 text-xs font-medium">Marlboro Red</p>
+<div class="h-2 bg-gray-200 rounded-full"><div class="h-2 bg-[var(--primary-color)] rounded-full" style="width: 90%;"></div></div>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sales: $450K</div>
+</div>
+<div class="grid grid-cols-[auto_1fr] items-center gap-x-3 relative group">
+<p class="text-gray-500 text-xs font-medium">Newport Menthol</p>
+<div class="h-2 bg-gray-200 rounded-full"><div class="h-2 bg-[var(--primary-color)] rounded-full" style="width: 80%;"></div></div>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sales: $400K</div>
+</div>
+<div class="grid grid-cols-[auto_1fr] items-center gap-x-3 relative group">
+<p class="text-gray-500 text-xs font-medium">Camel Blue</p>
+<div class="h-2 bg-gray-200 rounded-full"><div class="h-2 bg-[var(--primary-color)] rounded-full" style="width: 70%;"></div></div>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sales: $350K</div>
+</div>
+<div class="grid grid-cols-[auto_1fr] items-center gap-x-3 relative group">
+<p class="text-gray-500 text-xs font-medium">Juul Pods</p>
+<div class="h-2 bg-gray-200 rounded-full"><div class="h-2 bg-[var(--primary-color)] rounded-full" style="width: 65%;"></div></div>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sales: $325K</div>
+</div>
+<div class="grid grid-cols-[auto_1fr] items-center gap-x-3 relative group">
+<p class="text-gray-500 text-xs font-medium">Black &amp; Mild</p>
+<div class="h-2 bg-gray-200 rounded-full"><div class="h-2 bg-[var(--primary-color)] rounded-full" style="width: 60%;"></div></div>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sales: $300K</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-md border border-gray-200 p-6 bg-white shadow-sm">
+<div>
+<p class="text-gray-500 text-sm font-medium">Sales by Category</p>
+<div class="flex items-center gap-2 text-sm">
+<p class="text-gray-500">Current Year</p>
+<p class="text-gray-500 font-medium">+10%</p>
+</div>
+</div>
+<div class="flex-1 flex items-end gap-x-4">
+<div class="flex flex-col items-center gap-y-2 flex-1 text-center relative group">
+<div class="text-gray-900 text-xs">$1.2M</div>
+<div class="w-full bg-gray-200 rounded-t-md" style="height: 100px;">
+<div class="w-full bg-[var(--primary-color)] rounded-t-md" style="height: 48%;"></div>
+</div>
+<p class="text-xs text-gray-500">Cigarettes</p>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sales: $1.2M</div>
+</div>
+<div class="flex flex-col items-center gap-y-2 flex-1 text-center relative group">
+<div class="text-gray-900 text-xs">$0.6M</div>
+<div class="w-full bg-gray-200 rounded-t-md" style="height: 100px;">
+<div class="w-full bg-[var(--primary-color)] rounded-t-md" style="height: 24%;"></div>
+</div>
+<p class="text-xs text-gray-500">Smokeless</p>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sales: $0.6M</div>
+</div>
+<div class="flex flex-col items-center gap-y-2 flex-1 text-center relative group">
+<div class="text-gray-900 text-xs">$0.4M</div>
+<div class="w-full bg-gray-200 rounded-t-md" style="height: 100px;">
+<div class="w-full bg-[var(--primary-color)] rounded-t-md" style="height: 16%;"></div>
+</div>
+<p class="text-xs text-gray-500">Cigars</p>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sales: $0.4M</div>
+</div>
+<div class="flex flex-col items-center gap-y-2 flex-1 text-center relative group">
+<div class="text-gray-900 text-xs">$0.2M</div>
+<div class="w-full bg-gray-200 rounded-t-md" style="height: 100px;">
+<div class="w-full bg-[var(--primary-color)] rounded-t-md" style="height: 8%;"></div>
+</div>
+<p class="text-xs text-gray-500">Vapes</p>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sales: $0.2M</div>
+</div>
+<div class="flex flex-col items-center gap-y-2 flex-1 text-center relative group">
+<div class="text-gray-900 text-xs">$0.1M</div>
+<div class="w-full bg-gray-200 rounded-t-md" style="height: 100px;">
+<div class="w-full bg-[var(--primary-color)] rounded-t-md" style="height: 4%;"></div>
+</div>
+<p class="text-xs text-gray-500">Other</p>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Sales: $0.1M</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6" >
+<div class="flex flex-col gap-4 rounded-md border border-gray-200 p-6 bg-white shadow-sm"  style="background-color: rgb(233, 231, 231);">
+<div class="flex items-center justify-between">
+<p class="text-gray-500 text-sm font-medium">Regional Sales Performance (USA)</p>
+<div class="flex items-center gap-x-2">
+<span class="text-gray-500 text-xs">Low</span>
+<div class="flex items-center">
+<div class="w-4 h-4 bg-[var(--primary-color-lightest)]"></div>
+<div class="w-4 h-4 bg-[var(--primary-color-lighter)]"></div>
+<div class="w-4 h-4 bg-[var(--primary-color-light)]"></div>
+<div class="w-4 h-4 bg-[var(--primary-color)]"></div>
+<div class="w-4 h-4 bg-[var(--primary-color-dark)]"></div>
+</div>
+<span class="text-gray-500 text-xs">High</span>
+</div>
+</div>
+<div class="flex-1 flex items-center justify-center relative group bg-white border-gray-200 rounded-md p-4">
+<img alt="USA Map with color-coded sales data for each state." class="w-full h-auto max-h-80 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQp2jVsqaLsizcEUchp8auz7XjahJ_wkzMTkoBounF9X2_TdZ0UJ9TIDYcAPeKWvf-ECel4CoWgJ4qKzqw5P6SRjPSSO38wAEZTIjx8g1haFqisnAjBQwB_moxZ7wl8ZjyLC9uS_Vq_4TRuybDlvma0BCKW45xz35MVmdYINit5FX-vDNIvfJm2FbJsKkJSCkWHgVRxjmYEWEGJLmBHGctAIpRPz4FwOpvzhysS8hAjPtMJ2DBM68ec10pCTZw8pIxYnJowRAdCleY"/>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-md border border-gray-200 p-6 bg-white shadow-sm">
+<p class="text-gray-500 text-sm font-medium">AOV by Age Group</p>
+<div class="flex-1 flex items-center justify-center gap-x-12">
+<div class="relative w-56 h-56">
+<svg class="w-full h-full" viewBox="0 0 36 36">
+<circle class="stroke-current text-gray-200" cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke-width="3"></circle>
+<circle class="stroke-current text-[var(--primary-color-lightest)]" cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke-dasharray="15, 85" stroke-dashoffset="25" stroke-width="3"></circle>
+<circle class="stroke-current text-[var(--primary-color-lighter)]" cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke-dasharray="18, 82" stroke-dashoffset="10" stroke-width="3"></circle>
+<circle class="stroke-current text-[var(--primary-color-light)]" cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke-dasharray="20, 80" stroke-dashoffset="-8" stroke-width="3"></circle>
+<circle class="stroke-current text-[var(--primary-color)]" cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke-dasharray="22, 78" stroke-dashoffset="-28" stroke-width="3"></circle>
+<circle class="stroke-current text-[var(--primary-color-dark)]" cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke-dasharray="25, 75" stroke-dashoffset="-50" stroke-width="3"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-3xl font-bold text-gray-800">$230</span>
+</div>
+</div>
+<div class="grid gap-y-3 text-sm">
+<div class="flex items-center gap-x-2 relative group">
+<div class="w-3 h-3 rounded-full bg-[var(--primary-color-lightest)]"></div>
+<span class="text-gray-600 w-12">18-24</span>
+<span class="font-semibold text-gray-800">$180</span>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">AOV: $180 (15%)</div>
+</div>
+<div class="flex items-center gap-x-2 relative group">
+<div class="w-3 h-3 rounded-full bg-[var(--primary-color-lighter)]"></div>
+<span class="text-gray-600 w-12">25-34</span>
+<span class="font-semibold text-gray-800">$210</span>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">AOV: $210 (18%)</div>
+</div>
+<div class="flex items-center gap-x-2 relative group">
+<div class="w-3 h-3 rounded-full bg-[var(--primary-color-light)]"></div>
+<span class="text-gray-600 w-12">35-44</span>
+<span class="font-semibold text-gray-800">$230</span>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">AOV: $230 (20%)</div>
+</div>
+<div class="flex items-center gap-x-2 relative group">
+<div class="w-3 h-3 rounded-full bg-[var(--primary-color)]"></div>
+<span class="text-gray-600 w-12">45-54</span>
+<span class="font-semibold text-gray-800">$250</span>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">AOV: $250 (22%)</div>
+</div>
+<div class="flex items-center gap-x-2 relative group">
+<div class="w-3 h-3 rounded-full bg-[var(--primary-color-dark)]"></div>
+<span class="text-gray-600 w-12">55+</span>
+<span class="font-semibold text-gray-800">$300</span>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">AOV: $300 (25%)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></main>
+</div>
+</div>
+</body></html>
