@@ -12,26 +12,80 @@
         --high-sales-color: #1e7bd7;
         --low-sales-color: #c3ddfd;
       }
+      #date-filter-options:not(:focus-within) ~ #custom-filter-section,
+      #date-filter-options:focus-within .group\/custom:not(:focus) ~ #custom-filter-section {
+        display: none;
+      }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white text-[#344054]">
 <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
 <div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="size-8 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-[#344054]">Master Database Sales Trend Dashboard</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<button class="relative">
+<span class="material-symbols-outlined text-gray-500 hover:text-[#344054] transition-colors"> notifications </span>
+<div class="absolute -top-1 -right-1 size-2.5 bg-[var(--primary-color)] rounded-full border-2 border-white"></div>
+</button>
+<div class="absolute top-full right-0 mt-2 w-80 bg-white border border-gray-200 rounded-md shadow-lg z-20 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300">
+<div class="p-4 border-b border-gray-200">
+<h3 class="font-semibold text-[#344054]">Notifications</h3>
+<p class="text-sm text-gray-500">You have 3 unread messages.</p>
+</div>
+<div class="divide-y divide-gray-200 max-h-80 overflow-y-auto">
+<a class="block p-4 hover:bg-gray-50" href="#">
+<p class="font-medium text-[#344054]">New report is available</p>
+<p class="text-sm text-gray-500 mt-1">Your Q3 sales report is ready for download.</p>
+<p class="text-xs text-gray-400 mt-2">15 minutes ago</p>
+</a>
+<a class="block p-4 hover:bg-gray-50" href="#">
+<p class="font-medium text-[#344054]">Server maintenance</p>
+<p class="text-sm text-gray-500 mt-1">Scheduled maintenance will be on Oct 25 at 2 AM.</p>
+<p class="text-xs text-gray-400 mt-2">1 hour ago</p>
+</a>
+<a class="block p-4 hover:bg-gray-50" href="#">
+<p class="font-medium text-[#344054]">Inventory Alert: Low Stock</p>
+<p class="text-sm text-gray-500 mt-1">Camel Blue is running low on stock.</p>
+<p class="text-xs text-gray-400 mt-2">3 hours ago</p>
+</a>
+<a class="block p-4 hover:bg-gray-50 bg-gray-50 text-gray-400" href="#">
+<p class="font-medium">System Update</p>
+<p class="text-sm mt-1">The system has been updated to the latest version.</p>
+<p class="text-xs mt-2">1 day ago</p>
+</a>
+</div>
+<div class="p-2 border-t border-gray-200">
+<button class="w-full text-sm text-[var(--primary-color)] font-medium hover:bg-gray-100 p-2 rounded-md transition-colors">View all notifications</button>
+</div>
+</div>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtgWBl6cCUC4pct2hSfogp5i-1YzN4M6RBy6Oe4BW5139a7Lhw04qiQun2EDCLmpEEKykVmeqrRu3Dy1691wBBXHkIRD3q2IWN-khwz7GnHcvj2BdO52LLJnGq8A5YpbUgCW2Jko_iulU7ltKpZ98zugysQA9Tpnb9iT976LJMq2Hp_KuJwt9fSAs0Cnf9XGYJTZhwlYtnNH4Cyz9WCGzSC8E_LW2QxsNqafssC8p6NpGI-VO7w1SKXtbwatvqn9RZzTts92ftCX-");'></div>
+</div>
+</header>
 <main class="flex-1 px-4 sm:px-6 lg:px-8 py-8">
 <div class="max-w-8xl mx-auto">
 <div class="mb-8">
-<h1 class="text-gray-900 text-3xl font-bold">Master Database | Sales Trend Dashboard</h1>
+<h1 class="text-3xl font-bold text-[#344054]">Sales Trend Dashboard</h1>
 <p class="text-gray-500 mt-1">Analyze sales trends and performance for the Tobacco industry.</p>
 </div>
-<div class="flex flex-wrap gap-2 mb-8">
+<div class="flex flex-wrap gap-2 mb-4">
 <div class="relative group">
 <div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
 <span class="text-gray-500">Industry:</span>
-<span class="text-gray-900">Tobacco</span>
+<span class="text-[#344054]">Tobacco</span>
 <span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
 </div>
-<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Tobacco</a>
+<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300">
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Tobacco</a>
 <a class="flex items-center justify-between px-3 py-1.5 text-gray-400 cursor-not-allowed" href="#">
 <span>Liquor</span>
 <span class="material-symbols-outlined text-sm">lock</span>
@@ -42,152 +96,309 @@
 </a>
 </div>
 </div>
-<div class="relative group">
+<div class="relative group" id="date-filter-options">
+<button class="flex items-center gap-x-2 rounded-md border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-[#344054] shadow-sm">
+<span class="whitespace-nowrap"><span class="text-gray-500">Date Filter:</span> Year</span>
+<span class="material-symbols-outlined text-gray-500">expand_more</span>
+</button>
+<div class="absolute left-0 top-full z-20 mt-2 w-48 rounded-lg border border-gray-200 bg-white p-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
+<a class="block rounded-md px-3 py-2 text-sm bg-gray-100 font-semibold" href="#">Year</a>
+<a class="block rounded-md px-3 py-2 text-sm hover:bg-gray-100" href="#">Quarter</a>
+<a class="block rounded-md px-3 py-2 text-sm hover:bg-gray-100" href="#">Month</a>
+<a class="block rounded-md px-3 py-2 text-sm hover:bg-gray-100" href="#">Week</a>
+<a class="group/custom block rounded-md px-3 py-2 text-sm hover:bg-gray-100" href="#" tabindex="0">Custom</a>
+</div>
+</div>
+<div class="relative group hidden" id="custom-date-picker">
+<button class="flex items-center gap-x-2 rounded-md border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-[#344054] shadow-sm">
+<span class="material-symbols-outlined text-gray-500">calendar_today</span>
+<span class="whitespace-nowrap">Jan 1, 2023 - Dec 31, 2023</span>
+<span class="material-symbols-outlined text-gray-500">expand_more</span>
+</button>
+<div class="absolute left-0 top-full z-20 mt-2 rounded-lg border border-gray-200 bg-white p-4 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-bold text-lg text-[#344054]">December 2023</h3>
+<p class="text-sm text-gray-500">31 Days</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-full text-gray-500 hover:bg-gray-100">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="flex h-8 w-8 items-center justify-center rounded-full text-gray-500 hover:bg-gray-100">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-sm">
+<div class="font-medium text-gray-500">Su</div>
+<div class="font-medium text-gray-500">Mo</div>
+<div class="font-medium text-gray-500">Tu</div>
+<div class="font-medium text-gray-500">We</div>
+<div class="font-medium text-gray-500">Th</div>
+<div class="font-medium text-gray-500">Fr</div>
+<div class="font-medium text-gray-500">Sa</div>
+<div class="text-gray-400">26</div>
+<div class="text-gray-400">27</div>
+<div class="text-gray-400">28</div>
+<div class="text-gray-400">29</div>
+<div class="text-gray-400">30</div>
+<div class="cursor-pointer rounded-l-full bg-blue-100 py-1.5 text-blue-800">1</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">2</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">3</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">4</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">5</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">6</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">7</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">8</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">9</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">10</div>
+<div class="relative cursor-pointer bg-blue-100 py-1.5 text-blue-800">
+11
+<span class="absolute inset-0 m-auto h-7 w-7 rounded-full border-2 border-blue-800 font-bold"></span>
+</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">12</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">13</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">14</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">15</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">16</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">17</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">18</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">19</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">20</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">21</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">22</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">23</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">24</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">25</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">26</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">27</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">28</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">29</div>
+<div class="cursor-pointer bg-blue-100 py-1.5 text-blue-800">30</div>
+<div class="cursor-pointer rounded-r-full bg-blue-100 py-1.5 text-blue-800">31</div>
+</div>
+<button class="mt-2 w-full rounded-md bg-[var(--primary-color)] px-4 py-2 text-sm font-medium text-white hover:bg-opacity-90">Apply</button>
+</div>
+</div>
+</div>
+<div class="relative group" id="data-scope-filter">
 <div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
-<span class="text-gray-500">Date Filter:</span>
-<span class="text-gray-900">Current Year</span>
+<span class="text-gray-500">Data Scope:</span>
+<span class="text-[#344054]">Master Database</span>
 <span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
 </div>
-<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Current Year</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Current Quarter</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Current Month</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Current Week</a>
+<div class="absolute left-0 top-full z-20 mt-2 w-max rounded-lg border border-gray-200 bg-white p-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300">
+<a class="block rounded-md px-3 py-2 text-sm hover:bg-gray-100" href="#">My Store</a>
+<a class="block rounded-md px-3 py-2 text-sm hover:bg-gray-100 bg-gray-100 font-semibold" href="#">Master Database</a>
+</div>
+</div>
+<div class="relative group" id="comparison-mode-filter">
+<div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
+<span class="text-gray-500">Comparison Mode:</span>
+<span class="text-[#344054]">By Timeframe</span>
+<span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
+</div>
+<div class="absolute left-0 top-full z-20 mt-2 w-max rounded-lg border border-gray-200 bg-white p-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300">
+<a class="block rounded-md px-3 py-2 text-sm hover:bg-gray-100 bg-gray-100 font-semibold" href="#" id="by-timeframe-option">By Timeframe</a>
+<a class="block rounded-md px-3 py-2 text-sm hover:bg-gray-100" href="#">By Store (Master vs My Store)</a>
 </div>
 </div>
 <div class="relative group">
 <div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
 <span class="text-gray-500">Region:</span>
-<span class="text-gray-900">All USA</span>
+<span class="text-[#344054]">All USA</span>
 <span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
 </div>
-<div class="absolute top-full left-0 mt-1 w-max bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">All USA</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Northeast</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Midwest</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">South</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">West</a>
+<div class="absolute top-full left-0 mt-1 w-max bg-white border border-gray-200 rounded-md shadow-lg z-10 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300">
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">All USA</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Northeast</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Midwest</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">South</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">West</a>
 </div>
 </div>
 <div class="relative group">
 <div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
 <span class="text-gray-500">Sales Channel:</span>
-<span class="text-gray-900">All</span>
+<span class="text-[#344054]">All</span>
 <span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
 </div>
-<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block">
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">All</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Ecommerce</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">On Store</a>
+<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300">
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">All</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Ecommerce</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">On Store</a>
 </div>
 </div>
 <div class="relative group">
 <div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
 <span class="text-gray-500">Brand:</span>
-<span class="text-gray-900">All</span>
+<span class="text-[#344054]">All</span>
 <span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
 </div>
-<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block max-h-60 overflow-y-auto">
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">All</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Marlboro</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Newport</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Camel</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">American Spirit</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Pall Mall</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Winston</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Kool</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">L&amp;M</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Chesterfield</a>
+<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 max-h-60 overflow-y-auto">
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">All</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Marlboro</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Newport</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Camel</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">American Spirit</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Pall Mall</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Winston</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Kool</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">L&amp;M</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Chesterfield</a>
 </div>
 </div>
 <div class="relative group">
 <div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
 <span class="text-gray-500">Category:</span>
-<span class="text-gray-900">All</span>
+<span class="text-[#344054]">All</span>
 <span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
 </div>
-<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block max-h-60 overflow-y-auto">
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">All</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Cigarettes</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Cigars</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Smokeless Tobacco</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Vaping Products</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Pipe Tobacco</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Rolling Papers</a>
+<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 max-h-60 overflow-y-auto">
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">All</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Cigarettes</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Cigars</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Smokeless Tobacco</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Vaping Products</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Pipe Tobacco</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Rolling Papers</a>
 </div>
 </div>
 <div class="relative group">
 <div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
 <span class="text-gray-500">Product Name:</span>
-<span class="text-gray-900">All</span>
+<span class="text-[#344054]">All</span>
 <span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
 </div>
-<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block max-h-60 overflow-y-auto">
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">All</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Marlboro Red</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Newport Menthol</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Camel Blue</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">American Spirit Yellow</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Black &amp; Mild</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">Juul Pods</a>
+<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 max-h-60 overflow-y-auto">
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">All</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Marlboro Red</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Newport Menthol</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Camel Blue</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">American Spirit Yellow</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Black &amp; Mild</a>
+<a class="block px-3 py-1.5 text-[#344054] hover:bg-gray-100" href="#">Juul Pods</a>
 </div>
 </div>
-<div class="relative group">
-<div class="flex items-center gap-x-2 rounded-md bg-gray-100 px-3 py-1.5 text-sm font-medium cursor-pointer border border-gray-200">
-<span class="text-gray-500">Age Group:</span>
-<span class="text-gray-900">All</span>
-<span class="material-symbols-outlined text-gray-500 text-base"> expand_more </span>
 </div>
-<div class="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10 hidden group-hover:block max-h-60 overflow-y-auto">
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">All</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">18-24</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">25-34</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">35-44</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">45-54</a>
-<a class="block px-3 py-1.5 text-gray-900 hover:bg-gray-100" href="#">55+</a>
+<div class="hidden bg-gray-50 p-4 rounded-lg border border-gray-200 mb-8" id="custom-filter-section">
+<div class="flex flex-wrap items-center gap-4">
+<span class="text-sm font-medium text-gray-700">Custom Date Range:</span>
+<div class="flex items-center gap-4 flex-1 min-w-[300px]">
+<span class="text-sm text-gray-600">Jan 1, 2023</span>
+<div class="relative w-full h-2 bg-gray-200 rounded-full">
+<div class="absolute h-2 bg-[var(--primary-color)] rounded-full" style="left: 0%; width: 100%;"></div>
+<div class="absolute -top-1.5 w-5 h-5 bg-white border-2 border-[var(--primary-color)] rounded-full cursor-pointer" style="left: 0%;"></div>
+<div class="absolute -top-1.5 w-5 h-5 bg-white border-2 border-[var(--primary-color)] rounded-full cursor-pointer" style="left: calc(100% - 20px);"></div>
+</div>
+<span class="text-sm text-gray-600">Dec 31, 2023</span>
+</div>
+<button class="px-4 py-2 text-sm font-medium text-white bg-[var(--primary-color)] rounded-md hover:bg-opacity-90">Apply</button>
+</div>
+</div>
+<div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-blue-600 text-3xl">lightbulb</span>
+</div>
+<div class="flex-1">
+<h2 class="text-xl font-bold text-blue-900 mb-2">Key Business Insights</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-white p-4 rounded-md shadow-sm border border-gray-100">
+<p class="text-sm text-gray-700">Tobacco industry sales increased by <span class="font-bold text-green-600">12%</span> this quarter vs last quarter.</p>
+</div>
+<div class="bg-white p-4 rounded-md shadow-sm border border-gray-100">
+<p class="text-sm text-gray-700">Marlboro Red sales grew <span class="font-bold text-green-600">+15% MoM</span> — highest among all products.</p>
+</div>
+<div class="bg-white p-4 rounded-md shadow-sm border border-gray-100">
+<p class="text-sm text-gray-700">Vaping category gained <span class="font-bold text-green-600">+9%</span> market share in Q3.</p>
+</div>
+<div class="bg-white p-4 rounded-md shadow-sm border border-gray-100">
+<p class="text-sm text-gray-700">Repeat purchases increased by <span class="font-bold text-green-600">8%</span> across all cigarette brands.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="mb-8">
-<h2 class="text-gray-900 text-xl font-bold mb-4">Key Performance Indicators</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-<div class="flex flex-col gap-2 rounded-md p-6 bg-white border border-gray-200 shadow-sm">
+<h2 class="text-xl font-bold mb-4 text-[#344054]">Key Performance Indicators</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-white border border-gray-200">
 <div class="flex items-center justify-between">
 <p class="text-gray-500 text-sm font-medium">Total Sales</p>
 <span class="material-symbols-outlined text-gray-500"> attach_money </span>
 </div>
-<p class="text-gray-900 text-3xl font-bold">$2.5M</p>
+<div>
+<p class="text-3xl font-bold text-[#344054]">$2.5M</p>
+<div class="flex items-center gap-1 text-sm font-medium text-green-500">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+<span>10%</span>
 </div>
-<div class="flex flex-col gap-2 rounded-md p-6 bg-white border border-gray-200 shadow-sm">
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-white border border-gray-200">
 <div class="flex items-center justify-between">
-<p class="text-gray-500 text-sm font-medium">Sales Growth %</p>
-<span class="material-symbols-outlined text-green-500"> trending_up </span>
+<p class="text-gray-500 text-sm font-medium">Total Qty Sold</p>
+<span class="material-symbols-outlined text-gray-500"> inventory_2 </span>
 </div>
-<p class="text-green-500 text-3xl font-bold">+15%</p>
+<div>
+<p class="text-3xl font-bold text-[#344054]">500K</p>
+<div class="flex items-center gap-1 text-sm font-medium text-green-500">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+<span>5%</span>
 </div>
-<div class="flex flex-col gap-2 rounded-md p-6 bg-white border border-gray-200 shadow-sm">
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-white border border-gray-200">
 <div class="flex items-center justify-between">
 <p class="text-gray-500 text-sm font-medium">Number of Orders</p>
 <span class="material-symbols-outlined text-gray-500"> shopping_cart </span>
 </div>
-<p class="text-gray-900 text-3xl font-bold">12,500</p>
+<div>
+<p class="text-3xl font-bold text-[#344054]">12,500</p>
+<div class="flex items-center gap-1 text-sm font-medium text-red-500">
+<span class="material-symbols-outlined text-base">arrow_downward</span>
+<span>-2%</span>
 </div>
-<div class="flex flex-col gap-2 rounded-md p-6 bg-white border border-gray-200 shadow-sm">
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-white border border-gray-200">
+<div class="flex items-center justify-between">
+<p class="text-gray-500 text-sm font-medium">Repeat Purchase Rate</p>
+<span class="material-symbols-outlined text-gray-500"> loyalty </span>
+</div>
+<div>
+<p class="text-3xl font-bold text-[#344054]">25%</p>
+<div class="flex items-center gap-1 text-sm font-medium text-green-500">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+<span>3%</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-lg p-6 bg-white border border-gray-200">
 <div class="flex items-center justify-between">
 <p class="text-gray-500 text-sm font-medium">Average Sale per Customer</p>
 <span class="material-symbols-outlined text-gray-500"> person </span>
 </div>
-<p class="text-gray-900 text-3xl font-bold">$200</p>
+<div>
+<p class="text-3xl font-bold text-[#344054]">$200</p>
+<div class="flex items-center gap-1 text-sm font-medium text-green-500">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+<span>12%</span>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="grid gap-6 mb-8">
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-<div class="flex flex-col gap-4 rounded-md border border-gray-200 p-6 bg-white shadow-sm">
+<div class="flex flex-col gap-4 rounded-lg border border-gray-200 p-6 bg-white">
 <div class="flex items-center justify-between">
 <div>
 <p class="text-gray-500 text-sm font-medium">Sales Over Time</p>
-<p class="text-gray-900 text-3xl font-bold truncate">$2.5M</p>
+<p class="text-3xl font-bold truncate text-[#344054]">$2.5M</p>
 <div class="flex items-center gap-2 text-sm">
 <p class="text-gray-500">Current Year</p>
 <p class="text-green-500 font-medium">+15% vs Previous Year</p>
@@ -204,11 +415,10 @@
 </div>
 </div>
 </div>
-<div class="flex-1 relative group">
+<div class="flex-1 relative">
 <svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#e2e8f0" stroke-dasharray="4 4" stroke-linecap="round" stroke-width="2"></path>
-<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="var(--primary-color)" stroke-linecap="round" stroke-width="2"></path>
 <path d="M0 132C18.1538 132 18.1538 52 36.3077 52C54.4615 52 54.4615 88 72.6154 88C90.7692 88 90.7692 124 108.923 124C127.077 124 127.077 64 145.231 64C163.385 64 163.385 116 181.538 116C199.692 116 199.692 80 217.846 80C236 80 236 76 254.154 76C272.308 76 272.308 140 290.462 140C308.615 140 308.615 136 326.769 136C344.923 136 344.923 20 363.077 20C381.231 20 381.231 92 399.385 92C417.538 92 417.538 136 435.692 136C453.846 136 453.846 48 472 48" stroke="#cbd5e1" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="var(--primary-color)" stroke-linecap="round" stroke-width="2"></path>
 <path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#paint0_linear_sales_over_time)"></path>
 <defs>
 <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_sales_over_time" x1="236" x2="236" y1="1" y2="149">
@@ -217,34 +427,122 @@
 </linearGradient>
 </defs>
 </svg>
-<div class="absolute top-0 left-0 w-full h-full bg-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<div class="absolute bg-white border border-gray-200 shadow-lg rounded-lg p-2 text-xs w-40" style="left: 36.3077px; top: 1px; transform: translate(-50%, -100%);">
-<p class="font-bold">Feb 2023</p>
-<p><span class="font-semibold">Sales:</span> $210K</p>
-<p class="text-gray-500">+12% vs. Feb 2022</p>
-</div>
-<div class="absolute bg-white border border-gray-200 shadow-lg rounded-lg p-2 text-xs w-40" style="left: 145.231px; top: 23px; transform: translate(-50%, -100%);">
-<p class="font-bold">Apr 2023</p>
-<p><span class="font-semibold">Sales:</span> $330K</p>
-<p class="text-gray-500">+18% vs. Apr 2022</p>
-</div>
-<div class="absolute bg-white border border-gray-200 shadow-lg rounded-lg p-2 text-xs w-40" style="left: 254.154px; top: 35px; transform: translate(-50%, -100%);">
-<p class="font-bold">Jun 2023</p>
-<p><span class="font-semibold">Sales:</span> $450K</p>
-<p class="text-gray-500">+20% vs. Jun 2022</p>
-</div>
-<div class="absolute bg-white border border-gray-200 shadow-lg rounded-lg p-2 text-xs w-40" style="left: 363.077px; top: -9px; transform: translate(-50%, -100%);">
-<p class="font-bold">Aug 2023</p>
-<p><span class="font-semibold">Sales:</span> $100K</p>
-<p class="text-red-500">-5% vs. Aug 2022</p>
+<div class="absolute top-0 left-0 w-full h-full flex justify-between">
+<div class="h-full w-px" style="left: 7.7%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $150K</p>
+<p>Previous Year: $130K</p>
 </div>
 </div>
 </div>
+<div class="h-full w-px" style="left: 15.4%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $180K</p>
+<p>Previous Year: $160K</p>
 </div>
-<div class="flex flex-col gap-4 rounded-md border border-gray-200 p-6 bg-white shadow-sm">
+</div>
+</div>
+<div class="h-full w-px" style="left: 23.1%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $220K</p>
+<p>Previous Year: $200K</p>
+</div>
+</div>
+</div>
+<div class="h-full w-px" style="left: 30.8%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $190K</p>
+<p>Previous Year: $170K</p>
+</div>
+</div>
+</div>
+<div class="h-full w-px" style="left: 38.5%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $250K</p>
+<p>Previous Year: $230K</p>
+</div>
+</div>
+</div>
+<div class="h-full w-px" style="left: 46.2%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $210K</p>
+<p>Previous Year: $190K</p>
+</div>
+</div>
+</div>
+<div class="h-full w-px" style="left: 53.9%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $180K</p>
+<p>Previous Year: $160K</p>
+</div>
+</div>
+</div>
+<div class="h-full w-px" style="left: 61.6%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $280K</p>
+<p>Previous Year: $250K</p>
+</div>
+</div>
+</div>
+<div class="h-full w-px" style="left: 69.3%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $300K</p>
+<p>Previous Year: $270K</p>
+</div>
+</div>
+</div>
+<div class="h-full w-px" style="left: 77%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $100K</p>
+<p>Previous Year: $80K</p>
+</div>
+</div>
+</div>
+<div class="h-full w-px" style="left: 84.7%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $230K</p>
+<p>Previous Year: $210K</p>
+</div>
+</div>
+</div>
+<div class="h-full w-px" style="left: 92.4%">
+<div class="relative group h-full">
+<div class="absolute w-px h-full bg-transparent"></div>
+<div class="absolute -top-6 -translate-x-1/2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+<p>Current Year: $280K</p>
+<p>Previous Year: $250K</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-lg border border-gray-200 p-6 bg-white">
 <div>
 <p class="text-gray-500 text-sm font-medium">Top 10 Products by Sales</p>
-<p class="text-gray-900 text-3xl font-bold truncate">$500K</p>
+<p class="text-3xl font-bold truncate text-[#344054]">$500K</p>
 <div class="flex items-center gap-2 text-sm">
 <p class="text-gray-500">Current Year</p>
 <p class="text-green-500 font-medium">+5%</p>
@@ -293,51 +591,274 @@
 </div>
 </div>
 </div>
-<div class="flex flex-col gap-4 rounded-md border border-gray-200 bg-white p-6 shadow-sm">
+<div class="flex flex-col gap-4 rounded-lg border border-gray-200 p-6 bg-white">
+<div class="flex justify-between items-start">
 <div>
-<p class="text-sm font-medium text-gray-500">Sales by Category</p>
+<p class="text-gray-500 text-sm font-medium">Top 5 Sales by Category</p>
+<p class="text-3xl font-bold truncate text-[#344054]">$1.2M</p>
 <div class="flex items-center gap-2 text-sm">
 <p class="text-gray-500">Current Year</p>
-<p class="font-medium text-green-500">+10%</p>
-</div>
-</div>
-<div class="flex h-full flex-1 items-end gap-x-2">
-<div class="grid h-full w-full grid-cols-5 items-end gap-x-4 border-l border-b border-gray-200 pl-4 pb-1 pt-4">
-<div class="group relative flex h-full flex-col justify-end">
-<div class="absolute -top-7 left-1/2 -translate-x-1/2 rounded-md bg-white px-2 py-1 text-xs font-semibold text-gray-900 opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">$1.2M</div>
-<div class="h-full w-full rounded-t-md bg-[var(--primary-color)]" style="height: 80%"></div>
-</div>
-<div class="group relative flex h-full flex-col justify-end">
-<div class="absolute -top-7 left-1/2 -translate-x-1/2 rounded-md bg-white px-2 py-1 text-xs font-semibold text-gray-900 opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">$0.6M</div>
-<div class="h-full w-full rounded-t-md bg-[var(--primary-color)]" style="height: 40%"></div>
-</div>
-<div class="group relative flex h-full flex-col justify-end">
-<div class="absolute -top-7 left-1/2 -translate-x-1/2 rounded-md bg-white px-2 py-1 text-xs font-semibold text-gray-900 opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">$0.4M</div>
-<div class="h-full w-full rounded-t-md bg-[var(--primary-color)]" style="height: 27%"></div>
-</div>
-<div class="group relative flex h-full flex-col justify-end">
-<div class="absolute -top-7 left-1/2 -translate-x-1/2 rounded-md bg-white px-2 py-1 text-xs font-semibold text-gray-900 opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">$0.2M</div>
-<div class="h-full w-full rounded-t-md bg-[var(--primary-color)]" style="height: 13%"></div>
-</div>
-<div class="group relative flex h-full flex-col justify-end">
-<div class="absolute -top-7 left-1/2 -translate-x-1/2 rounded-md bg-white px-2 py-1 text-xs font-semibold text-gray-900 opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">$0.1M</div>
-<div class="h-full w-full rounded-t-md bg-[var(--primary-color)]" style="height: 7%"></div>
+<p class="text-green-500 font-medium">+7%</p>
 </div>
 </div>
 </div>
-<div class="grid grid-cols-5 gap-x-4 pl-4">
-<p class="text-center text-xs text-gray-500">Cigarettes</p>
-<p class="text-center text-xs text-gray-500">Smokeless</p>
-<p class="text-center text-xs text-gray-500">Cigars</p>
-<p class="text-center text-xs text-gray-500">Vapes</p>
-<p class="text-center text-xs text-gray-500">Other</p>
+<div class="flex-1 flex items-end gap-x-4 pt-4">
+<div class="flex flex-col items-center gap-y-2 w-1/5 group relative">
+<div class="h-24 w-full bg-[var(--primary-color)] rounded-t-md"></div>
+<p class="text-xs text-gray-500">Cigarettes</p>
+<div class="absolute bottom-full mb-2 w-max p-2 bg-white rounded-md shadow-lg border border-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<p class="font-bold">Sales: $600K</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-y-2 w-1/5 group relative">
+<div class="h-16 w-full bg-[var(--primary-color)] rounded-t-md"></div>
+<p class="text-xs text-gray-500">Vaping</p>
+<div class="absolute bottom-full mb-2 w-max p-2 bg-white rounded-md shadow-lg border border-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<p class="font-bold">Sales: $300K</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-y-2 w-1/5 group relative">
+<div class="h-12 w-full bg-[var(--primary-color)] rounded-t-md"></div>
+<p class="text-xs text-gray-500">Cigars</p>
+<div class="absolute bottom-full mb-2 w-max p-2 bg-white rounded-md shadow-lg border border-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<p class="font-bold">Sales: $150K</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-y-2 w-1/5 group relative">
+<div class="h-8 w-full bg-[var(--primary-color)] rounded-t-md"></div>
+<p class="text-xs text-gray-500">Smokeless</p>
+<div class="absolute bottom-full mb-2 w-max p-2 bg-white rounded-md shadow-lg border border-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<p class="font-bold">Sales: $100K</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-y-2 w-1/5 group relative">
+<div class="h-6 w-full bg-[var(--primary-color)] rounded-t-md"></div>
+<p class="text-xs text-gray-500">Other</p>
+<div class="absolute bottom-full mb-2 w-max p-2 bg-white rounded-md shadow-lg border border-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<p class="font-bold">Sales: $50K</p>
 </div>
 </div>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-<div class="flex flex-col gap-4 rounded-md border border-gray-200 p-6 bg-white shadow-sm">
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+<div class="rounded-lg border border-gray-200 p-6 bg-white">
+<h3 class="text-lg font-semibold text-[#344054] mb-4 text-center">Sales vs Inventory Sufficiency Analysis</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-gray-500">
+<thead class="text-xs text-gray-700 uppercase bg-gray-50">
+<tr>
+<th class="px-6 py-3" scope="col">Rank</th>
+<th class="px-6 py-3" scope="col">Product Name</th>
+<th class="px-6 py-3" scope="col">Sale</th>
+<th class="px-6 py-3 relative group" scope="col">
+<div class="flex items-center">
+<span>Avg Quantity Sold per Day</span>
+<span class="material-symbols-outlined text-gray-500 ml-1 text-base cursor-help">info</span>
+</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max p-2 bg-gray-800 text-white rounded-md shadow-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+Total quantity sold divided by the number of days in the selected period.
+</div>
+</th>
+<th class="px-6 py-3" scope="col">QOH</th>
+<th class="px-6 py-3" scope="col">Status</th>
+<th class="px-6 py-3" scope="col">Add Product</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">1</td>
+<td class="px-6 py-4">Marlboro Red</td>
+<td class="px-6 py-4">$450K</td>
+<td class="px-6 py-4">120</td>
+<td class="px-6 py-4">5,000</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+<span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
+Sufficient
+</span>
+</td>
+<td class="px-6 py-4"></td>
+</tr>
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">2</td>
+<td class="px-6 py-4">Newport Menthol</td>
+<td class="px-6 py-4">$400K</td>
+<td class="px-6 py-4">110</td>
+<td class="px-6 py-4">4,500</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+<span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
+Sufficient
+</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-gray-500 hover:text-[var(--primary-color)]">
+<span class="material-symbols-outlined">add</span>
+</button>
+</td>
+</tr>
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">3</td>
+<td class="px-6 py-4">Camel Blue</td>
+<td class="px-6 py-4">$350K</td>
+<td class="px-6 py-4">96</td>
+<td class="px-6 py-4">1,000</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+<span class="w-2 h-2 mr-1 bg-yellow-500 rounded-full"></span>
+Low Stock
+</span>
+<span class="material-symbols-outlined text-gray-400 text-base">warning</span>
+</div>
+</td>
+<td class="px-6 py-4"></td>
+</tr>
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">4</td>
+<td class="px-6 py-4">Juul Pods</td>
+<td class="px-6 py-4">$325K</td>
+<td class="px-6 py-4">89</td>
+<td class="px-6 py-4">8,000</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+<span class="w-2 h-2 mr-1 bg-blue-500 rounded-full"></span>
+Surplus
+</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-gray-500 hover:text-[var(--primary-color)]">
+<span class="material-symbols-outlined">add</span>
+</button>
+</td>
+</tr>
+<tr class="bg-white hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">5</td>
+<td class="px-6 py-4">Black &amp; Mild</td>
+<td class="px-6 py-4">$300K</td>
+<td class="px-6 py-4">82</td>
+<td class="px-6 py-4">200</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+<span class="w-2 h-2 mr-1 bg-red-500 rounded-full"></span>
+Out of Stock
+</span>
+<span class="material-symbols-outlined text-gray-400 text-base">error</span>
+</div>
+</td>
+<td class="px-6 py-4"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="rounded-lg border border-gray-200 p-6 bg-white">
+<h3 class="text-lg font-semibold text-[#344054] mb-4 text-center">Top Products by Repeat Customers</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-gray-500">
+<thead class="text-xs text-gray-700 uppercase bg-gray-50">
+<tr>
+<th class="px-6 py-3" scope="col">Rank</th>
+<th class="px-6 py-3" scope="col">Product Name</th>
+<th class="px-6 py-3" scope="col">Repeat %</th>
+<th class="px-6 py-3" scope="col">Number of Repeat Customers</th>
+<th class="px-6 py-3" scope="col">Total Sales from Repeats</th>
+<th class="px-6 py-3" scope="col">Add Product</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">1</td>
+<td class="px-6 py-4">Marlboro Red</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="text-green-500 font-semibold">45%</span>
+<span class="text-xs text-green-500 flex items-center"><span class="material-symbols-outlined text-sm">arrow_upward</span>5%</span>
+</div>
+</td>
+<td class="px-6 py-4">1,200</td>
+<td class="px-6 py-4">$202.5K</td>
+<td class="px-6 py-4"></td>
+</tr>
+
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">2</td>
+<td class="px-6 py-4">Newport Menthol</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="font-semibold">42%</span>
+<span class="text-xs text-gray-500 flex items-center">-</span>
+</div>
+</td>
+<td class="px-6 py-4">1,100</td>
+<td class="px-6 py-4">$168K</td>
+<td class="px-6 py-4"></td>
+</tr>
+
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">3</td>
+<td class="px-6 py-4">Camel Blue</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="font-semibold">38%</span>
+<span class="text-xs text-gray-500 flex items-center">-</span>
+</div>
+</td>
+<td class="px-6 py-4">950</td>
+<td class="px-6 py-4">$133K</td>
+<td class="px-6 py-4 text-center">
+<button class="text-gray-500 hover:text-[var(--primary-color)]">
+<span class="material-symbols-outlined">add</span>
+</button>
+</td>
+</tr>
+
+<tr class="bg-white border-b hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">4</td>
+<td class="px-6 py-4">American Spirit Yellow</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-red-500">35%</span>
+<span class="text-xs text-red-500 flex items-center"><span class="material-symbols-outlined text-sm">arrow_downward</span>2%</span>
+</div>
+</td>
+<td class="px-6 py-4">800</td>
+<td class="px-6 py-4">$100K</td>
+<td class="px-6 py-4"></td>
+</tr>
+
+<tr class="bg-white hover:bg-gray-50">
+<td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">5</td>
+<td class="px-6 py-4">Juul Pods</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="font-semibold">30%</span>
+<span class="text-xs text-gray-500 flex items-center">-</span>
+</div>
+</td>
+<td class="px-6 py-4">700</td>
+<td class="px-6 py-4">$97.5K</td>
+<td class="px-6 py-4"></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+<div class="flex flex-col gap-4 rounded-lg border border-gray-200 p-6 bg-white">
 <div class="flex items-center justify-between">
 <p class="text-gray-500 text-sm font-medium">Regional Sales Performance</p>
+<div class="flex items-center gap-2">
+<span class="text-xs text-gray-500">Low</span>
+<div class="w-24 h-4 rounded-full bg-gradient-to-r from-[var(--low-sales-color)] to-[var(--high-sales-color)]"></div>
+<span class="text-xs text-gray-500">High</span>
+</div>
 </div>
 <div class="flex-1 flex items-center justify-center relative group">
 <img alt="USA map with sales volume by region" class="w-full h-auto max-h-64 object-contain" src="https://raw.githubusercontent.com/FTx-Harsh-2110/dashboard/refs/heads/main/image.png"/>
@@ -347,14 +868,14 @@
 </div>
 </div>
 </div>
-<!-- This is a single-line comment -->
-<div class="flex flex-col gap-4 rounded-md border border-gray-200 p-6 bg-white shadow-sm">
-<div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 rounded-lg border border-gray-200 p-6 bg-white">
+<div class="flex flex-col">
+<div class="mb-4">
 <p class="text-gray-500 text-sm font-medium">Age Group Wise Sales</p>
-<p class="text-gray-900 text-3xl font-bold truncate">$2.5M</p>
+<p class="text-3xl font-bold truncate text-[#344054]">$2.5M</p>
 </div>
 <div class="flex-1 flex items-center justify-center gap-8">
-<div class="relative w-48 h-48 group">
+<div class="relative w-36 h-36 group">
 <svg class="w-full h-full" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
 <circle class="text-gray-200" cx="18" cy="18" fill="none" r="15.91549430918954" stroke="currentColor" stroke-width="3.8"></circle>
 <circle class="text-[#84bbf6]" cx="18" cy="18" fill="none" r="15.91549430918954" stroke="currentColor" stroke-dasharray="15, 85" stroke-dashoffset="25" stroke-width="3.8"></circle>
@@ -364,100 +885,93 @@
 </svg>
 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
 <p class="text-gray-500 text-xs">Total Sales</p>
-<p class="text-gray-900 text-lg font-bold">$2.5M</p>
+<p class="text-lg font-bold text-[#344054]">$2.5M</p>
 </div>
 </div>
-<div class="flex flex-col gap-y-3">
+<div class="flex flex-col gap-y-2">
 <div class="flex items-center gap-x-2 relative group">
-<div class="w-3 h-3 rounded-full bg-[var(--primary-color)]"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-[var(--primary-color)]"></div>
 <span class="text-xs text-gray-600">18-24 (25%)</span>
 </div>
 <div class="flex items-center gap-x-2 relative group">
-<div class="w-3 h-3 rounded-full bg-[#3687f0]"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-[#3687f0]"></div>
 <span class="text-xs text-gray-600">25-34 (35%)</span>
 </div>
 <div class="flex items-center gap-x-2 relative group">
-<div class="w-3 h-3 rounded-full bg-[#5da1f3]"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-[#5da1f3]"></div>
 <span class="text-xs text-gray-600">35-44 (25%)</span>
 </div>
 <div class="flex items-center gap-x-2 relative group">
-<div class="w-3 h-3 rounded-full bg-[#84bbf6]"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-[#84bbf6]"></div>
 <span class="text-xs text-gray-600">45-54 (15%)</span>
 </div>
 <div class="flex items-center gap-x-2 relative group">
-<div class="w-3 h-3 rounded-full bg-gray-200"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-gray-200"></div>
 <span class="text-xs text-gray-600">55+ (5%)</span>
 </div>
 </div>
 </div>
 </div>
-<div class="flex flex-col gap-4 rounded-md border border-gray-200 p-6 bg-white shadow-sm">
-<div>
-<p class="text-gray-500 text-sm font-medium">Avg Sale/Customer (Age Group)</p>
-<p class="text-gray-900 text-3xl font-bold truncate">$200</p>
+<div class="flex flex-col">
+<div class="mb-4">
+<p class="text-gray-500 text-sm font-medium">Avg Sale per Customer</p>
+<p class="text-3xl font-bold truncate text-[#344054]">$200</p>
 </div>
 <div class="flex-1 flex items-center justify-center gap-8">
-<div class="relative w-48 h-48 group">
+<div class="relative w-36 h-36 group">
 <svg class="w-full h-full" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
 <circle class="text-gray-200" cx="18" cy="18" fill="none" r="15.91549430918954" stroke="currentColor" stroke-width="3.8"></circle>
-<circle class="text-[#84bbf6]" cx="18" cy="18" fill="none" r="15.91549430918954" stroke="currentColor" stroke-dasharray="15, 85" stroke-dashoffset="25" stroke-width="3.8"></circle>
-<circle class="text-[#5da1f3]" cx="18" cy="18" fill="none" r="15.91549430918954" stroke="currentColor" stroke-dasharray="25, 75" stroke-dashoffset="40" stroke-width="3.8"></circle>
-<circle class="text-[#3687f0]" cx="18" cy="18" fill="none" r="15.91549430918954" stroke="currentColor" stroke-dasharray="35, 65" stroke-dashoffset="65" stroke-width="3.8"></circle>
-<circle class="text-[var(--primary-color)]" cx="18" cy="18" fill="none" r="15.91549430918954" stroke="currentColor" stroke-dasharray="25, 75" stroke-dashoffset="0" stroke-width="3.8"></circle>
+<circle class="text-[#84bbf6]" cx="18" cy="18" fill="none" r="15.91549430918954" stroke="currentColor" stroke-dasharray="10, 90" stroke-dashoffset="25" stroke-width="3.8"></circle>
+<circle class="text-[#5da1f3]" cx="18" cy="18" fill="none" r="15.91549430918954" stroke="currentColor" stroke-dasharray="20, 80" stroke-dashoffset="35" stroke-width="3.8"></circle>
+<circle class="text-[#3687f0]" cx="18" cy="18" fill="none" r="15.91549430918954" stroke="currentColor" stroke-dasharray="30, 70" stroke-dashoffset="55" stroke-width="3.8"></circle>
+<circle class="text-[var(--primary-color)]" cx="18" cy="18" fill="none" r="15.91549430918954" stroke="currentColor" stroke-dasharray="40, 60" stroke-dashoffset="85" stroke-width="3.8"></circle>
 </svg>
 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-<p class="text-gray-500 text-xs">Overall Average</p>
-<p class="text-gray-900 text-lg font-bold">$200</p>
+<p class="text-gray-500 text-xs">Avg Sale</p>
+<p class="text-lg font-bold text-[#344054]">$200</p>
 </div>
 </div>
-<div class="flex flex-col gap-y-3">
+<div class="flex flex-col gap-y-2">
 <div class="flex items-center gap-x-2 relative group">
-<div class="w-3 h-3 rounded-full bg-[var(--primary-color)]"></div>
-<span class="text-xs text-gray-600">18-24 ($180)</span>
-<div class="absolute left-full ml-2 w-max p-2 bg-white rounded-md shadow-lg border border-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-<p class="font-bold">AOV: $180</p>
-<p class="text-gray-500">18-24 Age Group</p>
-</div>
+<div class="w-2.5 h-2.5 rounded-full bg-[var(--primary-color)]"></div>
+<span class="text-xs text-gray-600">18-24 ($220)</span>
 </div>
 <div class="flex items-center gap-x-2 relative group">
-<div class="w-3 h-3 rounded-full bg-blue-500"></div>
-<span class="text-xs text-gray-600">25-34 ($210)</span>
-<div class="absolute left-full ml-2 w-max p-2 bg-white rounded-md shadow-lg border border-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-<p class="font-bold">AOV: $210</p>
-<p class="text-gray-500">25-34 Age Group</p>
-</div>
+<div class="w-2.5 h-2.5 rounded-full bg-[#3687f0]"></div>
+<span class="text-xs text-gray-600">25-34 ($250)</span>
 </div>
 <div class="flex items-center gap-x-2 relative group">
-<div class="w-3 h-3 rounded-full bg-blue-400"></div>
-<span class="text-xs text-gray-600">35-44 ($230)</span>
-<div class="absolute left-full ml-2 w-max p-2 bg-white rounded-md shadow-lg border border-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-<p class="font-bold">AOV: $230</p>
-<p class="text-gray-500">35-44 Age Group</p>
-</div>
+<div class="w-2.5 h-2.5 rounded-full bg-[#5da1f3]"></div>
+<span class="text-xs text-gray-600">35-44 ($180)</span>
 </div>
 <div class="flex items-center gap-x-2 relative group">
-<div class="w-3 h-3 rounded-full bg-blue-300"></div>
-<span class="text-xs text-gray-600">45-54 ($250)</span>
-<div class="absolute left-full ml-2 w-max p-2 bg-white rounded-md shadow-lg border border-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-<p class="font-bold">AOV: $250</p>
-<p class="text-gray-500">45-54 Age Group</p>
-</div>
+<div class="w-2.5 h-2.5 rounded-full bg-[#84bbf6]"></div>
+<span class="text-xs text-gray-600">45-54 ($150)</span>
 </div>
 <div class="flex items-center gap-x-2 relative group">
-<div class="w-3 h-3 rounded-full bg-blue-200"></div>
-<span class="text-xs text-gray-600">55+ ($300)</span>
-<div class="absolute left-full ml-2 w-max p-2 bg-white rounded-md shadow-lg border border-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-<p class="font-bold">AOV: $300</p>
-<p class="text-gray-500">55+ Age Group</p>
+<div class="w-2.5 h-2.5 rounded-full bg-gray-200"></div>
+<span class="text-xs text-gray-600">55+ ($120)</span>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
+</div></main></div>
 </div>
-</div>
-</div></main>
-</div>
-</div>
+<script>
+    const dateFilterOptions = document.getElementById('date-filter-options');
+    const customOption = dateFilterOptions.querySelector('.group\\/custom');
+    const customDatePicker = document.getElementById('custom-date-picker');
+    customOption.addEventListener('click', (event) => {
+        event.preventDefault();
+        customDatePicker.classList.toggle('hidden');
+    });
+    // Hide custom picker if other options are clicked
+    dateFilterOptions.querySelectorAll('a:not(.group\\/custom)').forEach(option => {
+        option.addEventListener('click', () => {
+            customDatePicker.classList.add('hidden');
+        });
+    });
+</script>
 </body></html>
